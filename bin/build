@@ -1,0 +1,4 @@
+cd $GOPATH/src/github.com/DanielRenne/updateTranslation
+mkdir -p dist
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags "-s -w" -o dist/updateTranslation .
+CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -a -tags netgo -ldflags "-s -w" -o dist/updateTranslationDarwin .
